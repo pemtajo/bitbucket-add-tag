@@ -5,7 +5,6 @@ module Fastlane
   module Actions
     class BitbucketAddTagAction < Action
       def self.run(params)
-        UI.message("Creating tag...")
         base_url = "https://api.bitbucket.org/2.0/repositories/#{params[:project_team_name]}/#{params[:rep_name]}/refs/tags" 
         body = {
                  name: params[:tag_name],
@@ -25,7 +24,7 @@ module Fastlane
         if response.kind_of?(Net::HTTPSuccess)
             UI.success("Tag #{params[:tag_name]} successfully created.")
         else
-            UI.error("HTTP request to '#{uri}' with message '#{message}' failed with a #{response.code} response.")
+            UI.error("HTTP request to '#{uri}' with message '#{body}' failed with a #{response.code} response.")
             UI.user_error!('Error creating tag using Bitbucket rest Api. Please verify the bitbucket rest api doc.')
         end
       end
