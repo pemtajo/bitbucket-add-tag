@@ -8,10 +8,10 @@ Gem::Specification.new do |spec|
   spec.name          = 'fastlane-plugin-bitbucket_add_tag'
   spec.version       = Fastlane::BitbucketAddTag::VERSION
   spec.author        = 'Paulo Albuquerque'
-  spec.email         = 'peduardo25@gmail.com'
+  spec.email         = 'paulo.albuquerque@easynvest.com.br'
 
   spec.summary       = 'Creates tag according to the given name'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-bitbucket_add_tag"
+  spec.homepage      = "https://github.com/easynvest/bitbucket-add-tag"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
